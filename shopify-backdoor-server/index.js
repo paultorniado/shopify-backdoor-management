@@ -4,7 +4,7 @@ const cors = require('cors');  // Import the CORS package
 require('dotenv').config();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_SECRET = "d1N2fSVzObH34jARC/AAc1uXgLWuSFzr2Jtbvx+alHUxWt3WLByXdXxMnPsdm3LJ";
 const app = express();
 app.use(express.json());
 const { ObjectId } = require('mongodb');
@@ -13,7 +13,7 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
-const uri = process.env.MONGODB_URI;
+const uri = `mongodb+srv://<db_username>:<db_password>@backdoor-cluster.y9p35x5.mongodb.net/`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
